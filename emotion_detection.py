@@ -15,7 +15,7 @@ def emotion_detector(text_to_analyse):  # Define a function named sentiment_anal
        fear_v = emotion_d['fear']
        joy_v = emotion_d['joy']
        sadness_v = emotion_d['sadness']
-
+       #dominant_emotion = max(formatted_response, key = lambda x: formatted_response[x])
        domemotion = max(emotion_d, key=emotion_d.get)
        domemotion_v = emotion_d[domemotion]
        return {'anger': anger_v, 'disgust': disgust_v, 'fear': fear_v, 'joy': joy_v, 'sadness': sadness_v, 'dominant_emotion': domemotion} # Return the response text from the API
